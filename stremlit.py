@@ -53,16 +53,17 @@ def delete_geofence(geofence_id):
 
 results = []
 
-if uploaded_file and token is not None:
-    df = pd.read_csv(uploaded_file)
-    if 'geofence_id' in df.columns:
-        g_list = df['geofence_id'].tolist() 
-        st.write("List of Geofence IDs:")
-        st.write(str(g_list))
-        for geofence_id in g_list:
-            result = delete_geofence(geofence_id)
-            st.write(result)
-            results.append(result)
+if uploaded_file is not None:
+    if token:
+        df = pd.read_csv(uploaded_file)
+        if 'geofence_id' in df.columns:
+            g_list = df['geofence_id'].tolist() 
+            st.write("List of Geofence IDs:")
+            st.write(str(g_list))
+            for geofence_id in g_list:
+                result = delete_geofence(geofence_id)
+                st.write(result)
+                results.append(result)
     else:
         st.error("The uploaded CSV file does not contain a 'geofence_id' column.")
 
