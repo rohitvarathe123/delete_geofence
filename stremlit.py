@@ -61,6 +61,7 @@ if uploaded_file is not None:
         st.write(str(g_list))
         for geofence_id in g_list:
             result = delete_geofence(geofence_id)
+            st.write(result)
             results.append(result)
     else:
         st.error("The uploaded CSV file does not contain a 'geofence_id' column.")
@@ -70,4 +71,4 @@ if uploaded_file is not None:
 
 df1 = pd.DataFrame(results, columns=["Result", "Geofence ID", "Status Code", "Error Message"])
 st.write(df1)
-print("Lengh of deleted Geofence IDs - ", len(df1))
+st.write("Lengh of deleted Geofence IDs - ", len(df1))
