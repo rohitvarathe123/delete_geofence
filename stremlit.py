@@ -53,7 +53,7 @@ def delete_geofence(geofence_id):
 
 results = []
 
-if uploaded_file is not None:
+if uploaded_file and token is not None:
     df = pd.read_csv(uploaded_file)
     if 'geofence_id' in df.columns:
         g_list = df['geofence_id'].tolist() 
