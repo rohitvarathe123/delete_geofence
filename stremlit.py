@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 st.title('Geofence ID Deleteig and Viewer')
-
+st.write('please Name the column in the CSV file * geofence_id * ')
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 # token = 'RA7yf3GAldLcVHFm4eNIYy3HBxaxOA+NQa0nF31fIKElHJUy+KV6FoKDt57BMaSr'
 st.title('Token Input App')
