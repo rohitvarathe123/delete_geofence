@@ -6,33 +6,14 @@ st.title('Geofence ID Deleteig and Viewer')
 st.write('please Name the column in the CSV file * geofence_id * ')
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 # token = 'RA7yf3GAldLcVHFm4eNIYy3HBxaxOA+NQa0nF31fIKElHJUy+KV6FoKDt57BMaSr'
-st.title('Token Input App')
-
-# Token input field
-token = st.text_input('Enter your token:', '')
+st.title('Input header')
 
 
 
 
-headers = {
-    'accept': 'application/json, text/plain, */*',
-    'accept-language': 'en-US,en;q=0.9',
-    'access_token': token,
-    'access_type': '1',
-    'accountid': '11070',
-    'authorization': f'Bearer {token}',
-    'cookie': 'HttpOnly; HttpOnly; _ga=GA1.2.18109101.1716187206; _gid=GA1.2.331077234.1716738783; _d28=1717048389120; _d29=1717133374876; _ga_3DJQ70P2DW=GS1.2.1716960575.28.1.1716961601.0.0.0',
-    'origin': 'https://intouch.mapmyindia.com',
-    'priority': 'u=1, i',
-    'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    'userid': ''
-}
+
+
+headers = st.text_input('Enter your token:', '')
 
 
 base_url = 'https://intouch.mapmyindia.com/apis/api/geofence/'
@@ -54,7 +35,7 @@ def delete_geofence(geofence_id):
 results = []
 
 
-if token:
+if headers:
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         if 'geofence_id' in df.columns:
