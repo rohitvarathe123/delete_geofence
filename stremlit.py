@@ -14,22 +14,22 @@ uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
 
 headers = {
-    'accept': 'application/json, text/plain, /',
-    'accept-language': 'en-US,en;q=0.9',
-    'access_token': 'tF5NOpStPw5VAEkAQjJmQRLNYM2gsJdkJWg74Wg/dyDaB51OXrAf5AcKtLloJwAJ',
+    'accept': 'application/json, text/plain, */*',
+    'accept-language': 'en-US,en;q=0.9,hi;q=0.8',
+    'access_token': 'P3H8/U13jSNIIzfEK3Xa70RB2CHhI5GjCs/m1iWlSCAYnZFOIaXjSPG9m2xNKrOq',
     'access_type': '1',
     'accountid': '11070',
-    'authorization': 'Bearer tF5NOpStPw5VAEkAQjJmQRLNYM2gsJdkJWg74Wg/dyDaB51OXrAf5AcKtLloJwAJ',
-    'cookie': 'HttpOnly; HttpOnly; _ga=GA1.2.18109101.1716187206; _gid=GA1.2.417286741.1717397704; _d3=1717570503906; _ga_3DJQ70P2DW=GS1.2.1717416144.32.1.1717416507.0.0.0',
+    'authorization': 'Bearer P3H8/U13jSNIIzfEK3Xa70RB2CHhI5GjCs/m1iWlSCAYnZFOIaXjSPG9m2xNKrOq',
+    'cookie': 'HttpOnly; HttpOnly; _ga=GA1.2.138084718.1713154050; _gid=GA1.2.1508055208.1717418583; _d3=1717591383284; _ga_3DJQ70P2DW=GS1.2.1717418583.19.1.1717418683.0.0.0',
     'origin': 'https://intouch.mapmyindia.com',
     'priority': 'u=1, i',
-    'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    'sec-ch-ua': '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
     'userid': '99237'
 }
 
